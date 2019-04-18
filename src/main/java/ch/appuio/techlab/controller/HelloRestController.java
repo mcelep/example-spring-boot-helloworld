@@ -45,6 +45,6 @@ public class HelloRestController {
 	
 	@RequestMapping(value = "/{helloid}", method = RequestMethod.GET)
 	public Hello get(@PathVariable Long helloid) {
-		return this.helloRepository.findOne(helloid);
+		return this.helloRepository.findById(helloid).get();
 	}
 }
